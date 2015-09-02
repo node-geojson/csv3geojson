@@ -1,6 +1,6 @@
 {
   "name": "csv3geojson",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a fast streaming alternative to csv2geojson",
   "main": "index.js",
   "dependencies": {
