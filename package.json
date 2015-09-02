@@ -22,5 +22,9 @@
     "encoder"
   ],
   "author": "Tom MacWright",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tmcw/csv3geojson.git"
+  }
 }
