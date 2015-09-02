@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+var csv = require('csv-parser'),
+  fs = require('fs'),
+  through2 = require('through2'),
+  geojsonStream = require('geojson-stream');
+
+var lng = process.argv[2];
+var lat = process.argv[3];
+
+process.stdin
+  .pipe(csv())
+  .pipe(through2.obj(function(row, enc, callback) {
+    callback(null, {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          parseFloat(row[lng]),
+          parseFloat(row[lat])
+        ]
+      },
+      properties: row
+    });
+  }))
+  .pipe(geojsonStream.stringify())
+  .pipe(process.stdout);
