@@ -1,5 +1,7 @@
 # csv3geojson
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/csv3geojson.svg)](https://greenkeeper.io/)
+
 Faster CSV to GeoJSON that only supports node.js and streams.
 
 It's less user-friendly, not available as a library, not compatible with
